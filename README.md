@@ -57,24 +57,24 @@ venv\Scripts\activate
 # macOS/Linux
 source venv/bin/activate
 
-Upgrade pip and install required packages:
+# Upgrade pip and install required packages:
 
 pip install --upgrade pip
 pip install openai langchain langchain-community faiss-cpu pytest pytest-html playwright python-dotenv beautifulsoup4
 
-Install Playwright browsers:
+# Install Playwright browsers:
 
 playwright install
 Environment Variables (.env)
 
-Create a .env file in the project root with:
+# Create a .env file in the project root with:
 
 OPENAI_API_KEY=your_openai_api_key_here
 HEADLESS=False
 
 Do not include your real API key in the repo.
 
-Usage
+# Usage
 
 Prepare documents in capstone_data/docs/:
 
@@ -82,17 +82,17 @@ requirement_doc.txt – high-level requirements and test scenarios
 
 project_guidelines.pdf – coding guidelines, agentic behavior instructions, and output structure
 
-Run the project:
+# Run the project:
 
 python app.py
 
-Choose input type:
+# Choose input type:
 
 Option	Description
 1	Manual Requirement (type directly)
 2	Fetch Jira "To Do" Stories (provide project key, e.g., SCRUM)
 
-Outputs are saved in output/<ticket>/:
+# Outputs are saved in output/<ticket>/:
 
 Output File	Description
 test_cases.csv	Generated test cases
@@ -109,19 +109,19 @@ Demo & Presentation Tips
 
 Run in headed browser mode to showcase live Playwright execution. Highlight agentic reasoning and retrieval from the RAG pipeline. Show that the agent self-checks and references previous context. Use metrics and LinkedIn post to demonstrate engineering depth and communication skills. Maintain clear folder structure and ticket naming for easy review.
 
-RAG Pipeline Overview
+# RAG Pipeline Overview
 
 Text and PDF documents are loaded from capstone_data/docs/. Documents are split into chunks and converted to embeddings using OpenAI models. Embeddings are stored in a FAISS vector store. During execution, the agent retrieves relevant context before generating test cases, BDD scenarios, or automation scripts. This ensures context-aware, agentic behavior and full compliance with Capstone requirements.
 
-Best Practices & Scoring Recommendations
+# Best Practices & Scoring Recommendations
 
 Ensure modular and maintainable code. Follow coding guidelines and Playwright best practices. Keep test cases and feature files readable and mapped clearly. Generate HTML reports for each run. Demonstrate headed browser execution for demo clarity. Clear documentation (README.md + architecture.mmd) improves review scores. Proper use of RAG pipeline and reasoning ensures agentic compliance. Metrics and LinkedIn post generation showcase full engineering depth.
 
-Architecture Diagram
+# Architecture Diagram
 
 See architecture.mmd for a full system overview.
 
-References
+# References
 
 LangChain Documentation
 
