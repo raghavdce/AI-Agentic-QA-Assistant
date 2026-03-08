@@ -48,10 +48,12 @@ AI-Agentic-QA-Assistant/
 ## Dependencies
 
 Create and activate Python virtual environment:  
-```bash
+
 python -m venv venv
+
 # Windows
 venv\Scripts\activate
+
 # macOS/Linux
 source venv/bin/activate
 
