@@ -23,6 +23,28 @@ AI-Agentic-QA-Assistant/
 ├── architecture.mmd               # System architecture diagram  
 └── README.md  
 
+## Module Descriptions
+
+- **qa_agent.py** – Coordinates the overall AI QA workflow, invoking reasoning, tool-calling, and self-reflection loops. Acts as the central agent controlling test case generation, BDD, automation, and evaluation.
+
+- **automation_generator.py** – Generates Playwright automation scripts from BDD scenarios or test cases. Supports optional self-healing for minor UI changes during execution.
+
+- **bdd_generator.py** – Converts user stories or requirements into Gherkin-style BDD scenarios. Ensures edge cases, negative cases, and acceptance criteria are included.
+
+- **data_loader.py** – Loads and preprocesses text, PDF, and Word documents for the RAG pipeline. Handles chunking, encoding, and prepares documents for embeddings.
+
+- **metrics_generator.py** – Calculates advanced metrics such as number of test cases, BDD scenarios, coverage, and self-healing applied. Provides a quantitative evaluation of automation outputs.
+
+- **post_generator.py** – Creates a LinkedIn-style post summarizing the AI-generated outputs and project impact. Automates professional communication about each ticket or feature.
+
+- **rag_pipeline.py** – Implements Retrieval-Augmented Generation: splits documents, creates vector embeddings, stores in Chroma DB, and retrieves relevant context. Enables context-aware reasoning for test generation.
+
+- **requirement_reviewer.py** – Analyzes Jira stories or manual requirements for gaps, risks, and missing validations. Acts as the AI “senior QA” reviewing completeness and compliance.
+
+- **testcase_generator.py** – Generates structured test cases (CSV) from stories or retrieved context. Ensures coverage of edge cases and acceptance criteria.
+
+- **app.py** – Main entrypoint for the project; handles user input, initializes RAG pipeline, invokes agents, and saves outputs. Coordinates the full pipeline from requirement input to automation execution.
+
 ## Dependencies
 
 Create and activate Python virtual environment:  
