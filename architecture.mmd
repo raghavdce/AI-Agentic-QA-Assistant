@@ -1,0 +1,14 @@
+flowchart TD
+    A[User Input] -->|Manual / Jira| B[Requirement Review Module]
+    B --> C[RAG Pipeline (Context Retrieval)]
+    C --> D[Test Case Generator]
+    C --> E[BDD Generator]
+    C --> F[Automation Script Generator]
+    D --> G[CSV Test Case Output]
+    E --> H[Feature File Output]
+    F --> I[Playwright Script Output]
+    F --> J[Run Automation (Headed/Headless)]
+    J --> K[HTML Test Report]
+    J --> L[Self-Healing Mechanism]
+    L --> F
+    K --> M[Evaluation / Metrics]

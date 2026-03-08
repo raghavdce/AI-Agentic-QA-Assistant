@@ -1,0 +1,3 @@
+test_cases_generated: 5
+bdd_scenarios: 3
+self_healing_applied: 0

@@ -1,0 +1,23 @@
+Capstone QA Automation Guidelines
+
+1. RAG Pipeline Usage:
+- Before generating test cases or automation scripts, retrieve context from requirement documents.
+- Include relevant scenarios, coding standards, and best practices.
+
+2. Agentic Behavior:
+- Agent should reason about requirements, self-check for missing steps, and correct itself.
+- Can reference previous test cases for similar scenarios.
+
+3. Output:
+- Generate CSV for test cases.
+- Generate BDD feature files.
+- Generate Playwright Python scripts.
+- Generate HTML reports.
+
+Demo & Reporting Tips:
+
+- Use headed browser mode for demonstration.
+- Highlight test case execution and browser actions in the demo.
+- Include screenshots if needed.
+- Maintain clear naming for tickets and folders.
+- Follow the structure: output/<ticket>/[test_cases.csv, feature.feature, playwright_tests.py, test_report.html]

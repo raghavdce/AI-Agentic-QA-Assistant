@@ -1,0 +1,23 @@
+Project: SauceDemo Web Application Automation
+
+Objective:
+- Automate login scenarios, including valid login, invalid login, missing username/password.
+- Verify success and error messages.
+- Use Playwright Python with pytest framework.
+- Each BDD scenario should map to a separate test function.
+
+Best Practices:
+- Use page.locator().is_visible() for assertions.
+- Avoid hardcoding waits; use Playwright sync API.
+- Include clean logging for test results.
+- Scripts should be modular and maintainable.
+
+Coding Guidelines:
+- Use descriptive function names like test_unsuccessful_login_invalid_credentials.
+- Keep code readable with proper indentation and comments.
+- Save test reports in HTML format.
+- Headed browser mode can be used for demo purposes.
+
+Additional Info:
+- URL under test: https://www.saucedemo.com/
+- Error messages are displayed in <h3 data-test='error'> elements.
