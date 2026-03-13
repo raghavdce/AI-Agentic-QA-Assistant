@@ -127,10 +127,6 @@ Execution Flow
 
 Requirement review runs first, followed by test case and BDD scenario generation. Automation scripts are then created and executed in headed or headless browser mode. Self-healing handles minor UI changes automatically during execution. Advanced metrics are calculated and saved, and LinkedIn-style post is generated for each ticket.
 
-Demo & Presentation Tips
-
-Run in headed browser mode to showcase live Playwright execution. Highlight agentic reasoning and retrieval from the RAG pipeline. Show that the agent self-checks and references previous context. Use metrics and LinkedIn post to demonstrate engineering depth and communication skills. Maintain clear folder structure and ticket naming for easy review.
-
 ## RAG Pipeline Overview
 
 Text and PDF documents are loaded from capstone_data/docs/. Documents are split into chunks and converted to embeddings using OpenAI models. Embeddings are stored in a ChromaDB vector database. During execution, the agent retrieves relevant context before generating test cases, BDD scenarios, or automation scripts. This ensures context-aware, agentic behavior and full compliance with Capstone requirements.
@@ -156,20 +152,21 @@ Ensure modular and maintainable code. Follow coding guidelines and Playwright be
 
 ## Architecture Diagram
 
+```mermaid
 flowchart TD
-    A[User Input] -->|Manual / Jira| B[Requirement Review Module]
-    B --> C[RAG Pipeline (Context Retrieval)]
-    C --> D[Test Case Generator]
-    C --> E[BDD Generator]
-    C --> F[Automation Script Generator]
-    D --> G[CSV Test Case Output]
-    E --> H[Feature File Output]
-    F --> I[Playwright Script Output]
-    F --> J[Run Automation (Headed/Headless)]
-    J --> K[HTML Test Report]
-    J --> L[Self-Healing Mechanism]
-    L --> F
-    K --> M[Evaluation / Metrics]
+A[User Input] -->|Manual / Jira| B[Requirement Review Module]
+B --> C[RAG Pipeline (Context Retrieval)]
+C --> D[Test Case Generator]
+C --> E[BDD Generator]
+C --> F[Automation Script Generator]
+D --> G[CSV Test Case Output]
+E --> H[Feature File Output]
+F --> I[Playwright Script Output]
+F --> J[Run Automation (Headed/Headless)]
+J --> K[HTML Test Report]
+J --> L[Self-Healing Mechanism]
+L --> F
+K --> M[Evaluation / Metrics]
 
 ## System Architecture Explanation
 
