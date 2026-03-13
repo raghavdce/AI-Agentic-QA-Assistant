@@ -4,8 +4,9 @@ import os
 import subprocess
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Load .env from the backup folder
+dotenv_path = os.path.abspath("../backup_env/.env")  # Adjust if folder location differs
+load_dotenv(dotenv_path)
 
 from generators.requirement_reviewer import review_requirement
 from generators.testcase_generator import generate_test_cases, save_testcases_to_csv
