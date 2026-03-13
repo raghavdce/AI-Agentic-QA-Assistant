@@ -152,7 +152,6 @@ Ensure modular and maintainable code. Follow coding guidelines and Playwright be
 
 ## Architecture Diagram
 
-```mermaid
 flowchart TD
 A[User Input] -->|Manual / Jira| B[Requirement Review Module]
 B --> C[RAG Pipeline (Context Retrieval)]
